@@ -109,6 +109,9 @@
 	SVGRect initialViewport = { 0, 0, [self.width pixelsValue], [self.height pixelsValue] };
 	self.viewport = initialViewport;
 	
+    // Set default viewBox 
+    _viewBox = CGRectMake(0, 0, [self.width pixelsValue], [self.height pixelsValue]);
+    
 	if( [[self getAttribute:@"viewBox"] length] > 0 )
 	{
 		NSArray* boxElements = [[self getAttribute:@"viewBox"] componentsSeparatedByString:@" "];
